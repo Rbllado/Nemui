@@ -80,6 +80,11 @@ a:hover {
     float:right;
   }
 
+
+  .btn:active {
+      background-color:white;
+  }
+
   @media screen and (max-width: 600px) {
     .form-container-mobile {display:flex; margin-top:15px; width:100%;};
     .article-img { display:block;text-align:center;float:center;}
@@ -92,6 +97,10 @@ a:hover {
       color:white;
       font-size:25px;
       
+  }
+
+  .navbar-brand:hover {
+      color:white;
   }
 
   .height-container {
