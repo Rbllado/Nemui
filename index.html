@@ -18,24 +18,32 @@
     <a class="navbar-brand colored-nav" href="index.html">NEMUY</a>
     <!-- <a  class="navbar-brand hidden-nav" href="/home"><img style="height:50px;"src="/images/.png"></a> -->
    
-    <form  id="form-container"class="form-inline ml-auto mx-auto" id="search-form" action='/home' method='POST'>
+    <!-- <form  class="form-container"class="form-inline ml-auto mx-auto" id="get-form" method='GET'>
     
-    <input class="form-control mr-sm-2" type='text' name='search' placeholder="Search Cocktails">
+    <input class="form-control mr-sm-2" type='text' name="cocktailId" id="input" placeholder="Search Cocktails">
     
-    <button class="btn btn-outline-success "type='submit' >Search</button>
-    </form>
+    <button class="btn btn-outline-success "type='submit' id="get">Search</button>
+    </form> -->
 
 
-   <form  id="form-container-mobile"class="form-inline ml-auto mx-auto" id="search-form" action='' method='POST'>
+   <form  class="form-container-mobile"class="form-inline ml-auto mx-auto" id="get-form" method='GET'>
     
-    <input class="form-control mr-sm-2" type='text' name='search' placeholder="Search Cocktails">
+    <input class="form-control mr-sm-2" type='text' name="cocktailId" id="input" placeholder="Search Cocktails">
     
-    <button class="btn btn-outline-success "type='submit'>Search</button>
+    <button class="btn btn-outline-success "type='submit' id="get">Search</button>
     </form>
   </nav>
 
-<body class="height-container">
-    
+<body>
+    <div class="height-container">
+    <span style="margin:20px auto; display:block; text-align:center; color:white;">Gin Cocktails</span> 
+
+    <hr>
+        <div  class="container" id="allCocktails">
+
+
+               </div>
+            </div>
         <footer>
                 <p>Rose, Rafa, Ivan & David &copy 2019</p>
               </footer> 
@@ -44,7 +52,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
+    <script src="search.js"></script>
     
 </body>
 

@@ -5,7 +5,7 @@
 body {
     font-size:16px;
     color:white;
-   
+   background-color: #212121;
     margin-right:-2px; 
 }
 
@@ -26,9 +26,9 @@ a {
   }
   
 
-  #form-container-mobile {
-    display:none;
-    width:100%;
+  .form-container-mobile {
+    display:flex;
+    width:40%;
     justify-content:center;
     flex-flow: row nowrap;
   }
@@ -43,7 +43,10 @@ a {
   } */
 
   .form-control {
-      padding:5px 20px 0px 5px;
+      padding:0px 20px 0px 5px;
+      width: 60%;
+      height:40px;
+      cursor: text;
   }
 
   #search-form input {
@@ -59,8 +62,14 @@ a {
       font-family: ‘Julius Sans One’, sans-serif;
   }
 
+  .btn-outline-success {
+      color:cornflowerblue;
+      border-color:cornflowerblue;
+      cursor: pointer;
+  }
 
-  #form-container {
+
+  .form-container {
     flex-flow: row nowrap;
    justify-content:flex-end;
    display:flex;
@@ -68,12 +77,11 @@ a {
   }
 
   @media screen and (max-width: 600px) {
-    #form-container {display: none;}
-    #form-container-mobile {display:flex; margin-top:25px;};
+    .form-container-mobile {display:flex; margin-top:15px; width:100%;};
     .article-img { display:block;text-align:center;float:center;}
     #article-img { margin:0 auto;display:block;}
-    .nav-link {font-size:16px;}
-
+    .navbar-brand {margin:0 auto;}
+    #allCocktails img {width:100%}
   }
 
   .navbar-light .navbar-brand {
@@ -84,4 +92,42 @@ a {
 
   .height-container {
     min-height:100vh;
+  }
+  
+
+  #allCocktails {
+      display:flex;
+      flex-flow: row wrap;
+  }
+
+  #allCocktails img {
+    width:80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  h3 {
+      font-size:16px;
+      color:white;
+      text-align:center;
+  }
+
+  hr {
+      border-color:white
+  }
+
+
+  #allCocktails div {
+      margin:30px auto;
+      display: block;
+      width:80%;
+    
+  }
+
+  footer {
+      background-color:#212121;
+      text-align:center;
+      padding:15px 0px 5px 0px;
+      color:white;
+      font-size:14px;
   }
