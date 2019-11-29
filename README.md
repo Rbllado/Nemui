@@ -8,3 +8,16 @@ Application web to make find your perfect cocktail. You will be able to find the
 
 <br>
 
+Trello
+
+[Trello Link]()
+
+## Links
+
+### Git
+
+The url to your repository and to your deployed project
+
+[Repository Link]()
+
+[Deploy Link]()
