@@ -1,4 +1,4 @@
-const searchByIdBaseUrl= "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+const searchByIngredient= "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
 const button = document.querySelector("#get")
 const input = document.querySelector("#input")
 const form = document.querySelector("#get-form")
@@ -11,9 +11,9 @@ var drinkId
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
     if(!input.value) return;
-    console.log(searchByIgredient+input.value);
+    console.log(searchByIngredient+input.value);
     
-    axios.get(searchByIgredient+input.value)
+    axios.get(searchByIngredient+input.value)
     .then(function (response) {
         // handle success
         console.log(response.data.drinks);
