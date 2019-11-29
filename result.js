@@ -12,56 +12,98 @@ axios.get(searchByIdBaseUrl+selectedDrink.idDrink)
         
         const divTitle = document.createElement("div")
         
-        const drinkTitle = document.createElement("h3")
-        const drinkType = document.createElement("h4")
+        const drinkTitle = document.createElement("h2")
 
         const div2 = document.createElement("div")
-        const drinkImg = document.createElement("img")
+            div2.classList.add("cocktail-details")
+            div2.classList.add("row")
+            
+            const divImg = document.createElement("div")
+                divImg.classList.add("coktail-img-container")
+                divImg.classList.add("col-md-6")
 
-        const div3 = document.createElement("div")
+                const drinkImg = document.createElement("img")
+                drinkImg.classList.add("cocktail-img")
+                drinkImg.setAttribute("src", selectedDataForTrue.strDrinkThumb)
+                divImg.appendChild(drinkImg)
 
-        const ingredients = document.createElement("div")
-        const ingredientsTitle = document.createElement("h3")
+            const div3 = document.createElement("div")
+                div3.classList.add("col-md-6")
+            
+            const div4 = document.createElement("div")
+            
+        const ingredients = document.createElement("article")
+            ingredients.classList.add("cocktail-detail");
 
+            //TYPE
+            const drinkType = document.createElement("span")
+            drinkType.classList.add("is-alcoholic")
+            drinkType.innerHTML = selectedDataForTrue.strAlcoholic
+            div3.appendChild(drinkType)
 
-        for (let i=1; i<16; i++){
-            if (selectedDataForTrue[`strIngredient${i}`]) {
-                const ingredientCocktail = document.createElement("p")
-                // const measure = document.createAttribute("span")
-                ingredients.appendChild(ingredientCocktail)
-                // div3.appendChild(measure)
+            //INGREDIENTS
+            const ingredientsTitle = document.createElement("p")
+            ingredientsTitle.classList.add("cocktail-detail__title")
+            ingredientsTitle.innerHTML = "Ingredients"    
+            
+            ingredients.appendChild(ingredientsTitle)
+            for (let i=1; i<16; i++){
+                if (selectedDataForTrue[`strIngredient${i}`]) {
+            ingredientsTitle.classList.add("cocktail-detail__title")
+                    const ingredientCocktail = document.createElement("p")
+                    ingredientCocktail.classList.add("cocktail-detail__item")
+                    
+                    ingredientCocktail.innerHTML = selectedDataForTrue[`strIngredient${i}`] + " - " + selectedDataForTrue[`strMeasure${i}`]
+                    // const measure = document.createAttribute("span")
+                    ingredients.appendChild(ingredientCocktail)
+                    // div3.appendChild(measure)
+                }
             }
-        }
+            div3.appendChild(ingredients)
+            
+            //GLASS
+            const glass = document.createElement("article")
+            const glassTitle = document.createElement("p")
+                glassTitle.classList.add("cocktail-detail__title")
+            const glassType = document.createElement("p")
+                glassType.classList.add("cocktail-detail__item")
 
-
-        div3.appendChild(ingredients)
+            glassTitle.innerHTML = "Served in: "
+            glassType.innerHTML = selectedDataForTrue.strGlass
+            glass.appendChild(glassTitle)
+            glass.appendChild(glassType)
+            
+            div3.appendChild(glass)
         
 
 
 
-        const instructions = document.createElement("div")
-        const information = document.createElement("div")
+        const instructions = document.createElement("article")
+        instructions.classList.add("cocktail-detail")
 
+            const instructionsTitle = document.createElement("p")
+            instructionsTitle.classList.add("cocktail-detail__title")           
+            instructionsTitle.innerHTML="Instructions"
+            instructions.appendChild(instructionsTitle)
 
-
-        const drinkIngredient = document.createElement("p")
+            const instruction = document.createElement("p") 
+            instruction.innerHTML = selectedDataForTrue.strInstructions
+            instructions.appendChild(instruction)
 
     
         drinkTitle.innerHTML = selectedDataForTrue.strDrink
-        drinkType.innerHTML = selectedDataForTrue.strAlcoholic
 
-        drinkImg.setAttribute("src", selectedDataForTrue.strDrinkThumb)
     
 
 
         divTitle.appendChild(drinkTitle)
-        divTitle.appendChild(drinkType)
 
-        div2.appendChild(drinkImg)
+        div2.appendChild(divImg)
         div2.appendChild(div3)
 
         selectedDrinkDiv.appendChild(divTitle)
         selectedDrinkDiv.appendChild(div2)
+        selectedDrinkDiv.appendChild(instructions)
 
 
         
