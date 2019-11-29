@@ -9,7 +9,27 @@ var drinkId
 
 
 form.addEventListener("submit", (e)=>{
+    allCocktails.innerHTML = "";
     e.preventDefault();
+
+
+    // prueba
+    const searchedCocktailIngredient = document.createElement("span");
+    const searchedThing = document.createElement("div");
+    const hr = document.createElement("hr");
+    searchedThingDiv.innerHTML = ""
+    searchedCocktailIngredient.setAttribute("id", "cocktail-result")
+    searchedCocktailIngredient.setAttribute("style", "margin:20px auto; display:block; text-align:center; color:white; font-style:22px")
+    searchedCocktailIngredient.innerHTML = `${(input.value).toUpperCase()} COCKTAILS`;
+    searchedThing.appendChild(searchedCocktailIngredient)
+    searchedThing.appendChild(hr)
+    searchedThingDiv.appendChild(searchedThing)
+
+
+
+
+
+
     if(!input.value) return;
     console.log(searchByIngredient+input.value);
     
