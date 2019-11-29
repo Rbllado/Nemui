@@ -26,16 +26,26 @@
     </form>
 
 
-   <form  id="form-container-mobile"class="form-inline ml-auto mx-auto" id="search-form" action='' method='POST'>
+   <form  id="form-container-mobile"class="form-inline ml-auto mx-auto" id="get-form" method='GET'>
     
-    <input class="form-control mr-sm-2" type='text' name='search' placeholder="Search Cocktails">
+    <input class="form-control mr-sm-2" type='text' name="cocktailId" id="input" placeholder="Search Cocktails">
     
-    <button class="btn btn-outline-success "type='submit'>Search</button>
+    <button class="btn btn-outline-success "type='submit' id="get">Search</button>
     </form>
   </nav>
 
 <body class="height-container">
-    
+
+    <span style="margin:20px auto; display:block; text-align:center; color:black;">Results for ...</span>
+
+        <div id= "cocktail-grid" class="container">
+               
+                <form method="get" id="get-form">
+                        <input type="text" name="cocktailId" id="input">
+                        <button type="submit" id="get">Search</button>
+                    </form>
+                    <div id="allCocktails"></div>
+
         <footer>
                 <p>Rose, Rafa, Ivan & David &copy 2019</p>
               </footer> 
