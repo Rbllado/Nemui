@@ -4,8 +4,8 @@
 }
 body {
     font-size:16px;
-    color:black;
-   
+    color:white;
+   background-color: #212121;
     margin-right:-2px; 
 }
 
@@ -27,8 +27,8 @@ a {
   
 
   .form-container-mobile {
-    display:none;
-    width:100%;
+    display:flex;
+    width:40%;
     justify-content:center;
     flex-flow: row nowrap;
   }
@@ -46,6 +46,7 @@ a {
       padding:0px 20px 0px 5px;
       width: 60%;
       height:40px;
+      cursor: text;
   }
 
   #search-form input {
@@ -61,6 +62,12 @@ a {
       font-family: ‘Julius Sans One’, sans-serif;
   }
 
+  .btn-outline-success {
+      color:cornflowerblue;
+      border-color:cornflowerblue;
+      cursor: pointer;
+  }
+
 
   .form-container {
     flex-flow: row nowrap;
@@ -70,12 +77,11 @@ a {
   }
 
   @media screen and (max-width: 600px) {
-    .form-container {display: none;}
-    .form-container-mobile {display:flex; margin-top:15px;};
+    .form-container-mobile {display:flex; margin-top:15px; width:100%;};
     .article-img { display:block;text-align:center;float:center;}
     #article-img { margin:0 auto;display:block;}
     .navbar-brand {margin:0 auto;}
-
+    #allCocktails img {width:100%}
   }
 
   .navbar-light .navbar-brand {
@@ -89,19 +95,39 @@ a {
   }
   
 
-  /* #allCocktails {
+  #allCocktails {
       display:flex;
       flex-flow: row wrap;
   }
 
+  #allCocktails img {
+    width:80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  h3 {
+      font-size:16px;
+      color:white;
+      text-align:center;
+  }
+
+  hr {
+      border-color:white
+  }
+
+
   #allCocktails div {
-      margin:10px auto;
+      margin:30px auto;
       display: block;
-  } */
+      width:80%;
+    
+  }
 
   footer {
       background-color:#212121;
       text-align:center;
-      padding:10px 0px;
-
+      padding:15px 0px 5px 0px;
+      color:white;
+      font-size:14px;
   }
