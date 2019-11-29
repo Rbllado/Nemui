@@ -1,6 +1,7 @@
 const selectedDrinkDiv = document.querySelector("#selectedDrink");
 const searchByIdBaseUrl =
   "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
+const searchByIngredient= "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
 const selectedDrink = JSON.parse(sessionStorage.selectedDrink);
 console.log(searchByIdBaseUrl + selectedDrink.idDrink);
 
