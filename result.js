@@ -63,6 +63,7 @@ axios.get(searchByIdBaseUrl+selectedDrink.idDrink)
             
             //GLASS
             const glass = document.createElement("article")
+                glass.classList.add("cocktail-detail")
             const glassTitle = document.createElement("p")
                 glassTitle.classList.add("cocktail-detail__title")
             const glassType = document.createElement("p")
