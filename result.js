@@ -2,7 +2,7 @@ const selectedDrinkDiv = document.querySelector("#selectedDrink")
 const searchByIdBaseUrl= "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
 const selectedDrink= JSON.parse(sessionStorage.selectedDrink)
 
-console.log(selectedDrink);
+console.log(searchByIdBaseUrl+selectedDrink.idDrink);
 
 axios.get(searchByIdBaseUrl+selectedDrink.idDrink)
     .then(function (selectedDrinkData) {
@@ -27,11 +27,14 @@ axios.get(searchByIdBaseUrl+selectedDrink.idDrink)
         for (let i=1; i<16; i++){
             if (selectedDataForTrue[`strIngredient${i}`]) {
                 const ingredientCocktail = document.createElement("p")
-                const measure = document.createAttribute("span")
-                div3.appendChild(ingredientCocktail)
-                div3.appendChild(measure)
+                // const measure = document.createAttribute("span")
+                ingredients.appendChild(ingredientCocktail)
+                // div3.appendChild(measure)
             }
         }
+
+
+        div3.appendChild(ingredients)
         
 
 
@@ -66,7 +69,7 @@ axios.get(searchByIdBaseUrl+selectedDrink.idDrink)
       })
       .catch(function (error) {
         // handle error
-        console.log("error to find cocktails");
+        console.log("error to find that cocktail");
         
         console.log(error);
       })
