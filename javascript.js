@@ -27,3 +27,20 @@ form.addEventListener("submit", (e)=>{
 
 
 // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
+
+
+
+
+//DYNAMIC STYLES 
+
+
+// $(document).ready(function () {
+//   $(window).scroll(function () {
+//       if ($(window).scrollTop() >= 50) {
+       
+
+//       } else {
+
+//       }
+//     }
+// }
