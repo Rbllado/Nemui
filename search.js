@@ -11,12 +11,12 @@ var drinkId
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
     if(!input.value) return;
-    console.log(searchByIgredient+input.value);
+    // console.log(searchByIgredient+input.value);
     
     axios.get(searchByIgredient+input.value)
     .then(function (response) {
         // handle success
-        console.log(response.data.drinks);
+        // console.log(response.data.drinks);
         response.data.drinks.forEach(drink=>{
             
             const drinkDiv = document.createElement("div")
