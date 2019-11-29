@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size:16px;
+    color:white;
+   background-color: #212121;
+    margin-right:-2px; 
+}
+
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+.navbar {
+    background: #c33764; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c33764, #1d2671); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c33764, #1d2671);
+    padding:20px;
+    /* margin:0; */
+}
+
+.form-inline{
+    flex-flow:row nowrap;
+  }
+  
+
+  .form-container-mobile {
+    display:flex;
+    width:40%;
+    justify-content:center;
+    flex-flow: row nowrap;
+  }
+
+/* #search-form {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction:row;
+    width:95%;
+    text-align:left;
+    margin:10px auto;
+  } */
+
+  .form-control {
+      padding:0px 20px 0px 5px;
+      width: 60%;
+      height:40px;
+      cursor: text;
+  }
+
+  #search-form input {
+      padding:20px;
+      border-radius:5px;
+  }
+
+  .height-container {
+    min-height:100vh;
+  }
+
+  .navbar-brand {
+      font-family: ‘Julius Sans One’, sans-serif;
+  }
+
+  .btn-outline-success {
+      color:cornflowerblue;
+      border-color:cornflowerblue;
+      cursor: pointer;
+  }
+
+
+  .form-container {
+    flex-flow: row nowrap;
+   justify-content:flex-end;
+   display:flex;
+    float:right;
+  }
+
+  @media screen and (max-width: 600px) {
+    .form-container-mobile {display:flex; margin-top:15px; width:100%;};
+    .article-img { display:block;text-align:center;float:center;}
+    #article-img { margin:0 auto;display:block;}
+    .navbar-brand {margin:0 auto;}
+    #allCocktails img {width:100%}
+  }
+
+  .navbar-light .navbar-brand {
+      color:white;
+      font-size:25px;
+      
+  }
+
+  .height-container {
+    min-height:100vh;
+  }
+  
+
+  #allCocktails {
+      display:flex;
+      flex-flow: row wrap;
+  }
+
+  #allCocktails img {
+    width:80%;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0px 0px 2px 2px white;
+    border-radius:3px;
+    cursor:pointer;
+  }
+
+  h3 {
+      font-size:18px;
+      color:white;
+      text-align:center;
+      margin-bottom:30px;
+
+  }
+
+  hr {
+      border-color:white
+  }
+
+
+  #allCocktails div {
+      margin:20px auto;
+      display: block;
+      width:80%;
+  
+  }
+
+  .container-cocktails div {
+    border-bottom:1px solid white;
+    padding-bottom:50px
+  }
+
+  footer {
+      background-color:#212121;
+      text-align:center;
+      padding:15px 0px 5px 0px;
+      color:white;
+      font-size:14px;
+  }
