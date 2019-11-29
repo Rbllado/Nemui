@@ -73,12 +73,19 @@ a:hover {
   .navbar-brand {
       font-family: ‘Julius Sans One’, sans-serif;
       font-size:27px;
+      text-align:center;
   }
 
   .btn-outline-success {
       color:cornflowerblue;
       border-color:cornflowerblue;
       cursor: pointer;
+  }
+
+  #logo-y {
+      width:16.15%;
+      margin-left:-6px;
+      margin-top:-8.5px;
   }
 
 
