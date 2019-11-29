@@ -47,15 +47,23 @@ a:hover {
   } */
 
   .form-control {
-      padding:0px 20px 0px 5px;
-      width: 60%;
+      padding:0px 5px 0px 0px;
+      width: 100%;
       height:40px;
       cursor: text;
+     
   }
 
   #search-form input {
       padding:20px;
       border-radius:5px;
+  }
+
+  #input {
+    font-size: 17px;
+    padding-left: 12px;
+    padding-top: 2px;
+    box-sizing: border-box;
   }
 
   .height-container {
@@ -64,12 +72,21 @@ a:hover {
 
   .navbar-brand {
       font-family: ‘Julius Sans One’, sans-serif;
+      font-size:27px;
+      text-align:center;
   }
 
   .btn-outline-success {
       color:cornflowerblue;
       border-color:cornflowerblue;
       cursor: pointer;
+  }
+
+  #logo-y {
+     width:12.45%;
+      margin-left:-8.5px;
+      margin-top:-10.9px;
+    
   }
 
 
@@ -81,16 +98,57 @@ a:hover {
   }
 
 
-  .btn:active {
-      background-color:white;
+  .btn-outline-success:not(:disabled):not(.disabled):active{
+      background-color:cornflowerblue;
+      color:white;
   }
 
+  .btn-outline-success:hover {
+    background-color:cornflowerblue;
+    color:white;
+  }
+
+  .btn-outline-success {
+    background: transparent;
+    margin-left: -38px;
+    width: 25px;
+    padding: 0;
+    border:none;
+  
+  }
+
+
   @media screen and (max-width: 600px) {
-    .form-container-mobile {display:flex; margin-top:15px; width:100%;};
+    .form-container-mobile {display:flex; margin:15px auto; width:100%; display: block;};
     .article-img { display:block;text-align:center;float:center;}
     #article-img { margin:0 auto;display:block;}
     .navbar-brand {margin:0 auto;}
     #allCocktails img {width:100%}
+    .btn-outline-success {
+        position:absolute;
+        top: 89px;
+    right: 30px;
+  }
+  }
+  @media screen and (min-width: 1000px) {
+    .form-container-mobile {display:flex;
+    width:40%;
+    justify-content:center;
+    flex-flow: row nowrap;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    
+    #allCocktails {
+        width: 90%;
+        flex-flow: row wrap;
+        display:flex;
+    }
+    #allCocktails div  {
+       
+    width: 40%;
+    }
   }
 
   .navbar-light .navbar-brand {
@@ -108,10 +166,10 @@ a:hover {
   }
   
 
-  #allCocktails {
+  /* #allCocktails {
       display:flex;
       flex-flow: row wrap;
-  }
+  } */
 
   #allCocktails img {
     width:80%;
@@ -131,7 +189,7 @@ a:hover {
   }
 
   hr {
-      border-color:white
+      border-color:grey;
   }
 
 
@@ -143,7 +201,7 @@ a:hover {
   }
 
   .container-cocktails div {
-    border-bottom:1px solid white;
+    border-bottom:1px solid grey;
     padding-bottom:50px
   }
 
