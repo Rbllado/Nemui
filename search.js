@@ -9,6 +9,7 @@ var drinkId
 
 
 form.addEventListener("submit", (e)=>{
+  allCocktails.innerHTML = "";
     e.preventDefault();
     if(!input.value) return;
     console.log(searchByIngredient+input.value);
