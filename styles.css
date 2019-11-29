@@ -76,8 +76,12 @@ a {
 
   }
 
-  .navbar-brand {
+  .navbar-light .navbar-brand {
       color:white;
       font-size:25px;
       
+  }
+
+  .height-container {
+    min-height:100vh;
   }
